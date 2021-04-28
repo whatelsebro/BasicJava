@@ -1,0 +1,92 @@
+ class Employees{
+
+private String name;
+private int year;
+private int salary;
+private String address;
+
+public void setName( String nameGiven ) {
+name = nameGiven;
+}
+
+public void setYear( int yearGiven ) {
+year = yearGiven;
+}
+
+public void setYear( String yearGiven ) {
+year = Integer.parseInt( yearGiven );
+}
+
+public void setSalary( int salaryGiven ) {
+salary = salaryGiven;
+}
+
+public void setSalary( String salaryGiven ) {
+	salary = Integer.parseInt( salaryGiven );
+}
+
+public void setAddress( String addressGiven ) {
+address = addressGiven;
+}
+
+public String getName() {
+return name;
+}
+
+public int getYear() {
+return year;
+}
+
+public int getSalary() {
+return salary;
+}
+
+public String getAddress() {
+return address;
+}
+
+
+public Employees( String employeeName, int employeeYear, int employeeSalary, String employeeAddress ) {
+name = employeeName;
+year = employeeYear;
+salary = employeeSalary;
+address = employeeAddress;
+}
+
+public Employees( String employeeName, int employeeYear ) {
+name = employeeName;
+year = employeeYear;
+salary = 0;
+address = "";
+}
+
+public Employees() {
+name = "";
+year = 0;
+salary = 0;
+address = "";
+}
+
+}
+
+public class Employeee{
+public static void main(String[] args) {
+
+Employees employee1 = new Employees();
+Employees employee2 = new Employees( "Sam", 2000 );
+Employees employee3 = new Employees( "John", 1999 , 600000 , "26B- WallsStreet" );
+
+employee1.setName( "Robert" );
+employee1.setYear( 1994 );
+employee1.setSalary( 500000 );
+employee1.setAddress( "64C- WallsStreet" );
+
+employee2.setSalary( 740000 );
+employee2.setAddress( "68D- WallsStreet" );
+
+System.out.println( "Name\t\tYear\t\tSalary\t\tAddress" );
+System.out.println( employee1.getName() + "\t\t" + employee1.getYear() + "\t\t" + employee1.getSalary() + "\t\t" + employee1.getAddress() );
+System.out.println( employee2.getName() + "\t\t" + employee2.getYear() + "\t\t" + employee2.getSalary() + "\t\t" + employee2.getAddress() );
+System.out.println( employee3.getName() + "\t\t" + employee3.getYear() + "\t\t" + employee3.getSalary() + "\t\t" + employee3.getAddress() );
+}
+}
